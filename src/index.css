@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .pulse-ring {
+    box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.7);
+    animation: pulseRing 1.5s cubic-bezier(0.66, 0, 0, 1) infinite;
+  }
+}
+
+@keyframes pulseRing {
+  to {
+    box-shadow: 0 0 0 35px rgba(244, 63, 94, 0);
+  }
+}
+
+/* Smooth scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
